@@ -1,3 +1,8 @@
+# NOT MY CODE
+trail renderer 3d which curently is not in godot
+Stolen from https://github.com/IndieQuest/DogFightTutorial
+
+
 # GODOG FIGHT
 
 This is an implementation of a dog fight game in Godot 3.2.2  
