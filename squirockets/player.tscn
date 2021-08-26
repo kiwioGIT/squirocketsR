@@ -1,0 +1,162 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://player.gd" type="Script" id=1]
+[ext_resource path="res://funt.tres" type="DynamicFont" id=2]
+[ext_resource path="res://cursor_win_crosshair.png" type="Texture" id=3]
+[ext_resource path="res://AKM.tscn" type="PackedScene" id=4]
+[ext_resource path="res://RPG.tscn" type="PackedScene" id=5]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1, 3.06048, 1 )
+
+[sub_resource type="CapsuleMesh" id=2]
+radius = 1.2
+mid_height = 4.0
+
+[sub_resource type="Animation" id=3]
+resource_name = "fire"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AKM2:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.0335276, 0.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.0617626, -0.0636027, -0.12678 ), Vector3( 0.0617626, -0.0636027, -0.117156 ), Vector3( 0.0617626, -0.0636027, -0.12678 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("RPG2:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.000364048, 0.0834762, 0.995689 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.0617455, -0.124465, -0.141454 ), Vector3( 0.0617455, -0.124465, -0.0997764 ), Vector3( 0.0617455, -0.124465, -0.141454 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "idle"
+
+[node name="player" type="KinematicBody" groups=[
+"player",
+]]
+collision_layer = 2
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="cam_origin" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.85768, 0 )
+
+[node name="Camera" type="Camera" parent="cam_origin"]
+current = true
+fov = 90.0
+far = 455.5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="cam_origin"]
+anims/fire = SubResource( 3 )
+anims/idle = SubResource( 4 )
+
+[node name="AKM3" parent="cam_origin" instance=ExtResource( 4 )]
+transform = Transform( 0.0178389, 0, 0.299469, 0, 0.3, 0, -0.299469, 0, 0.0178389, 1.00072, -0.846939, -1.79011 )
+visible = false
+
+[node name="AKM2" parent="cam_origin" instance=ExtResource( 4 )]
+transform = Transform( 0.00118926, 0, 0.0199646, 0, 0.02, 0, -0.0199646, 0, 0.00118926, 0.0617626, -0.0636027, -0.12678 )
+visible = false
+
+[node name="Position3D" type="Position3D" parent="cam_origin"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0732583, -0.0330527, -1.49869 )
+
+[node name="RPG" parent="cam_origin" instance=ExtResource( 5 )]
+transform = Transform( -3.0598e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.0598e-08, 1.23703, -2.5439, -2.89474 )
+visible = false
+
+[node name="RPG2" parent="cam_origin" instance=ExtResource( 5 )]
+transform = Transform( -8.74228e-10, 0, 0.02, 0, 0.02, 0, -0.02, 0, -8.74228e-10, 0.0617455, -0.124465, -0.141454 )
+
+[node name="tick_rate" type="Timer" parent="."]
+wait_time = 0.03
+autostart = true
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Control" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cursor_win_crosshair" type="Sprite" parent="Control"]
+texture = ExtResource( 3 )
+
+[node name="fire_rate" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="Control2" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control2"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -352.0
+margin_bottom = 69.0
+custom_fonts/font = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control2"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -107.5
+margin_right = 107.5
+margin_bottom = 73.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="Label3" type="Label" parent="Control2"]
+anchor_left = 0.297
+anchor_right = 0.297
+margin_left = -32.2401
+margin_top = 6.0
+margin_right = 121.76
+margin_bottom = 78.0
+custom_fonts/font = ExtResource( 2 )
+
+[node name="velo_update" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="RayCast" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.37595, 0 )
+enabled = true
+cast_to = Vector3( 1.7, 0, 0 )
+
+[node name="RayCast2" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.37595, 0 )
+enabled = true
+cast_to = Vector3( -1.7, 0, 0 )
+
+[connection signal="timeout" from="tick_rate" to="." method="_on_tick_rate_timeout"]
+[connection signal="timeout" from="velo_update" to="." method="_on_velo_update_timeout"]

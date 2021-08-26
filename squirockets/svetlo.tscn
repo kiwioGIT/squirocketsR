@@ -1,0 +1,14 @@
+[gd_scene format=2]
+
+[node name="OmniLight" type="OmniLight"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.5, -31.3876, 2.5 )
+light_color = Color( 0.843137, 0.988235, 1, 1 )
+light_energy = 2.27
+shadow_enabled = true
+shadow_bias = 5.74
+omni_range = 697.5
+
+[node name="CSGPolygon" type="CSGPolygon" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.13658, 5.80262 )
+polygon = PoolVector2Array( -1.06989, 0.269611, -3.55696, 1.79609, 3.56836, 1.50083, 1.69915, 0.162634 )
+depth = 11.523

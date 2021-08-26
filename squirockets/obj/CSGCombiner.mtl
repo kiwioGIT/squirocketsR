@@ -1,0 +1,20 @@
+newmtl [SpatialMaterial:5380]
+Kd 1 1 1
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:5376]
+Kd 1 1 1
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:5384]
+Kd 1 1 1
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:5392]
+Kd 1 1 1
+Ke 0 0 0
+d 1
+newmtl [SpatialMaterial:5388]
+Kd 1 1 1
+Ke 0 0 0
+d 1

@@ -1,0 +1,21 @@
+[gd_resource type="SpatialMaterial" load_steps=4 format=2]
+
+[ext_resource path="res://concrete_texture_30-1K/concrete_texture_30-1K/1K-concrete_30-diffuse.jpg" type="Texture" id=1]
+[ext_resource path="res://concrete_texture_30-1K/concrete_texture_30-1K/1K-concrete_30-ao.jpg" type="Texture" id=2]
+[ext_resource path="res://concrete_texture_30-1K/concrete_texture_30-1K/1K-concrete_30-normal.jpg" type="Texture" id=3]
+
+[resource]
+albedo_color = Color( 0.662745, 0.647059, 0.647059, 1 )
+albedo_texture = ExtResource( 1 )
+metallic_texture_channel = 4
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 3 )
+anisotropy_enabled = true
+anisotropy = 0.0
+ao_enabled = true
+ao_light_affect = 0.0
+ao_texture = ExtResource( 2 )
+ao_on_uv2 = false
+ao_texture_channel = 4
+uv1_triplanar = true
