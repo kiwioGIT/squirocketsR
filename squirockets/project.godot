@@ -90,11 +90,10 @@ limits/debugger_stdout/max_errors_per_second=10
 
 [physics]
 
-common/physics_fps=40
 common/enable_pause_aware_picking=true
 3d/physics_engine="Bullet"
 
 [rendering]
 
-quality/filters/anisotropic_filter_level=16
+threads/thread_model=2
 environment/default_environment="res://default_env.tres"

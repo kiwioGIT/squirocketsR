@@ -13,8 +13,8 @@ var velocity = Vector3()
 const ACCELERATION = 8
 const DE_ACCELERATION = 8
 const MOVE_SPEED = 34
-const JUMP_FORCE = 38
-const GRAVITY = 2
+const JUMP_FORCE = 55
+const GRAVITY = 1.7
 const MAX_FALL_SPEED = 500
 var mouse_captured = false
 var slide = false
@@ -29,8 +29,8 @@ onready var raycast = cam.get_node("RayCast")
 var hp = 10
 onready var gunanim = cam.get_node("AnimationPlayer")
 onready var particles = cam.get_node("Particles")
-var max_jet_speed = 50
-var jet_speed = 3
+var max_jet_speed = 70
+var jet_speed = 8
 var move_vec = Vector3()
 var camdistance = 0
 var y_velo = 0
@@ -151,11 +151,11 @@ func _physics_process(delta):
 				if leftarea.is_colliding():
 					velocity.y = JUMP_FORCE
 					boingvec = leftarea.get_collision_normal()
-					boingvec*=40
+					boingvec*=30
 				elif rightarea.is_colliding():
 					velocity.y = JUMP_FORCE
 					boingvec = rightarea.get_collision_normal()
-					boingvec*=40
+					boingvec*=30
 		hv += boingvec
 		hv.y = 0
 		if cam.rotation_degrees.z > finalrotationdegreesz:
