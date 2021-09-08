@@ -182,7 +182,6 @@ func _physics_process(delta):
 	else:
 		realcam.current = false
 		cam.get_node("AKM3").visible = false
-		cam.get_node("RPG").visible = true
 		rotation.y = puppet_rotation.y
 		cam.rotation.x = puppet_rotation.x
 		if !puppet_is_alive:

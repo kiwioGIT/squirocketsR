@@ -1,0 +1,138 @@
+[gd_scene load_steps=46 format=2]
+
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert12SG_nmap.tga.png" type="Texture" id=1]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert5SG_color.tga.png" type="Texture" id=2]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert2SG_color.tga.png" type="Texture" id=3]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert2SG_nmap.tga.png" type="Texture" id=4]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert7SG_color.tga.png" type="Texture" id=5]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert3SG_nmap.tga.png" type="Texture" id=6]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert3SG_color.tga.png" type="Texture" id=7]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert6SG_color.tga.png" type="Texture" id=8]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert6SG_nmap.tga.png" type="Texture" id=9]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert13SG_color.tga.png" type="Texture" id=10]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert8SG_color.tga.png" type="Texture" id=11]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert9SG_color.tga.png" type="Texture" id=12]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert4SG_nmap.tga.png" type="Texture" id=13]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert4SG_color.tga.png" type="Texture" id=14]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert7SG_nmap.tga.png" type="Texture" id=15]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert8SG_nmap.tga.png" type="Texture" id=16]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/source/Shtgnn/Shtgnn.obj" type="ArrayMesh" id=17]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert12SG_color.tga.png" type="Texture" id=18]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert10SG_nmap.tga.png" type="Texture" id=19]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert13SG_nmap.tga.png" type="Texture" id=20]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert10SG_color.tga.png" type="Texture" id=21]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert11SG_color.tga.png" type="Texture" id=22]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert9SG_nmap.tga.png" type="Texture" id=23]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert11SG_nmap.tga.png" type="Texture" id=24]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert14SG_nmap.tga.png" type="Texture" id=25]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert16SG_color.tga.png" type="Texture" id=26]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert14SG_color.tga.png" type="Texture" id=27]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert16SG_nmap.tga.png" type="Texture" id=28]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert15SG_color.tga.png" type="Texture" id=29]
+[ext_resource path="res://obj/super-shotgun-doom-eternal/textures/Shotgun_lambert15SG_nmap.tga.png" type="Texture" id=30]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 3 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 4 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_texture = ExtResource( 7 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 6 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_texture = ExtResource( 14 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 13 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_texture = ExtResource( 8 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 9 )
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_texture = ExtResource( 5 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 15 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_texture = ExtResource( 11 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 16 )
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_texture = ExtResource( 12 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 23 )
+
+[sub_resource type="SpatialMaterial" id=9]
+albedo_texture = ExtResource( 21 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 19 )
+
+[sub_resource type="SpatialMaterial" id=10]
+albedo_texture = ExtResource( 22 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 24 )
+
+[sub_resource type="SpatialMaterial" id=11]
+albedo_texture = ExtResource( 18 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 1 )
+
+[sub_resource type="SpatialMaterial" id=12]
+albedo_texture = ExtResource( 10 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 20 )
+
+[sub_resource type="SpatialMaterial" id=13]
+albedo_texture = ExtResource( 27 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 25 )
+
+[sub_resource type="SpatialMaterial" id=14]
+albedo_texture = ExtResource( 29 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 30 )
+
+[sub_resource type="SpatialMaterial" id=15]
+albedo_texture = ExtResource( 26 )
+metallic = 0.57
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 28 )
+
+[node name="MeshInstance" type="MeshInstance"]
+mesh = ExtResource( 17 )
+material/0 = SubResource( 1 )
+material/1 = SubResource( 2 )
+material/2 = SubResource( 3 )
+material/3 = SubResource( 4 )
+material/4 = SubResource( 5 )
+material/5 = SubResource( 6 )
+material/6 = SubResource( 7 )
+material/7 = SubResource( 8 )
+material/8 = SubResource( 9 )
+material/9 = SubResource( 10 )
+material/10 = SubResource( 11 )
+material/11 = SubResource( 12 )
+material/12 = SubResource( 13 )
+material/13 = SubResource( 14 )
+material/14 = SubResource( 15 )
